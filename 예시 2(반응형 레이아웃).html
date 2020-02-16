@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <meta charset="utf-8">
+  <title>쇼피 자동 등록 베타 버전</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #jb-container {
+      width: 1150px;
+      margin: 10px auto;
+      padding: 20px;
+      border: 1px solid #bcbcbc;
+    }
+    #jb-header {
+      padding: 20px;
+      margin-bottom: 20px;
+      border: 1px solid #bcbcbc;
+    }
+    #jb-content {
+      width: 840px;
+      padding: 20px;
+      margin-bottom: 20px;
+      float: left;
+      border: 1px solid #bcbcbc;
+    }
+    #jb-sidebar {
+      width: 250px;
+      padding: 20px; 
+      margin-bottom: 20px;
+      float: right;
+      border: 1px solid #bcbcbc;
+    }
+    .jb-footer {
+      clear: both;
+      padding: 0px;
+      border: 1px solid #bcbcbc;
+    }
+    @media ( max-width: 480px ) {
+      #jb-container {
+        width: auto;
+      }
+      #jb-content {
+        float: none;
+        width: auto;
+      }
+      #jb-sidebar {
+        float: none;
+        width: auto;
+      }
+    }
+
+    #apple {
+      width:680px;
+      height:30px;
+      font-size:16px;
+    }
+    #banana {
+      width:150px;
+      height:30px;
+      font-size:16px;
+    }
+    #candle {
+      width:350px;
+      height:30px;
+      font-size:16px;
+    }
+    
+    .button {
+      background-color: #08C1EF;
+      border: none;
+      color: black;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+
+    .button1 {width: 200px;}
+    .button2 {width: 200px;}
+    .button3 {width: 200px;}
+    .button4 {
+      text-align: right;
+    }
+
+    .box {
+      float:auto;
+      width:1100px; 
+      height:100px; 
+      color:black;      
+    }
+    .scroll {overflow: scroll;}
+
+    .href{
+      line-height: 5px
+    }
+
+  </style>
+</head>
+<body>
+  <div id="jb-container">
+    <div id="jb-header">
+      <h2>쿠팡 ID,PW</h2>
+      <div>
+        ID :&nbsp&nbsp&nbsp<input type="text" placeholder="ID"> &nbsp
+        <button class="button button1">계정연동</button>
+        <button class="button button2">상품등록</button>
+        <button class="button button3">등록중지</button>
+        <br></br>
+        PW : <input type="password" placeholder="PW"> &nbsp 로그인상태 : 비로그인 or 로그인 
+      </div>
+    </div>
+    <div id="jb-content">
+      <h2>기본 정보설정</h2>
+      <br></br>
+      <p>
+        URL :&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="apple" type="text" placeholder="URL">
+        <br></br>
+        카테고리 :&nbsp&nbsp<input id="banana" type="text">&nbsp&nbsp<input id="banana" type="text">&nbsp&nbsp<input id="banana" type="text">&nbsp&nbsp<input id="banana" type="text">
+        <br></br>
+        <br></br>
+        *브랜드&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="candle" type="text" placeholder="예) 나이키">
+        <br></br>
+        *제품명&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="candle" type="text" placeholder="예) 다운쉬프터">
+        <br></br>
+        *제조사&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="candle" type="text" placeholder="예) 나이키">
+        <br></br>
+        *등록상품명&nbsp&nbsp<input id="candle" type="text" placeholder="등록상품명을 자유롭게 입력하세요.">
+        <br></br>
+        <br></br>
+        <br></br>
+        *마진&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="candle" type="text">
+        <br></br>
+        *환율&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<input id="candle" type="text">
+
+      </p>
+      <div class="button4">
+        <div>
+          <button>초기화</button>
+        </div>
+      </div>
+    </div>
+    <div id="jb-sidebar">
+      <h5>카테고리</h5>
+      <ul>
+        <a href="">● 모든 카테고리(20)</a>
+        <br></br>
+        <a href="">● 패션의류잡화(0)</a>
+        <br></br>
+        <a href="">● 뷰티(16)</a>
+        <br></br>
+        <a href="">● 출산/유아동(0)</a>
+        <br></br>
+        <a href="">● 식품(0)</a>
+        <br></br>
+        <a href="">● 주방용품(1)</a>
+        <br></br>
+        <a href="">● 생활용품(2)</a>
+        <br></br>
+        <a href="">● 가구/홈데코(0)</a>
+        <br></br>
+        <a href="">● 가전/디지털(1)</a>
+        <br></br>
+        <a href="">● 스포츠/레저(0)</a>
+        <br></br>
+        <a href="">● 자동차용품(0)</a>
+        <br></br>
+        <a href="">● 도서(0)</a>
+        <br></br>
+        <a href="">● 문구/오피스(0)</a>
+        <br></br>
+        <a href="">● 음반/DVD(0)</a>
+        <br></br>
+        <a href="">● 완구/취미(0)</a>
+        <br></br>
+        <a href="">● 반려/애완용품(0)</a>
+      </ul>
+    </div>
+    <div class="jb-footer">
+      <div class="box scroll">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"></th>
+              <th scope="col">상품코드</th>
+              <th scope="col">카테고리</th>
+              <th scope="col">상품명</th>
+              <th scope="col">최종가격</th>
+              <th scope="col">상태</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>312940632</td>
+              <td>20669</td>
+              <td>Black Soybean Calcium Soymilk</td>
+              <td>10,387</td>
+              <td>작성성공</td>
+            </tr>
+            <tr>
+              <th scope="row">2</th>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <th scope="row">3</th>
+              <td colspan="2"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
